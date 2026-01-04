@@ -4,138 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archivo Motor - Invierte en Clásicos</title>
-    
-    <!-- Tailwind CSS CDN -->
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
-    
+
     <style>
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', sans-serif;
         }
         .title-font {
-            font-family: 'Playfair Display', Georgia, serif;
+            font-family: 'Playfair Display', serif;
         }
         .brand-font {
-            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-family: 'Cormorant Garamond', serif;
             letter-spacing: 0.15em;
         }
-        .smooth-transition {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
         .gradient-bg {
-            background: linear-gradient(135deg, #1a2f4d 0%, #243a56 50%, #1d3450 100%);
+            background: radial-gradient(circle at top, #0b1a2e 0%, #050d1a 55%, #030812 100%);
         }
     </style>
 </head>
 
 <body class="gradient-bg text-gray-100 min-h-screen">
 
-    <!-- HERO SECTION -->
-    <section class="min-h-screen flex items-center justify-center px-4 py-12 relative overflow-hidden">
-        
-        <div class="max-w-2xl mx-auto text-center relative z-10">
-            
-            <!-- Logo/Marca -->
-            <div class="mb-8">
-                
-                <!-- Logo AM -->
-                <div class="flex justify-center mb-4">
-                    <img 
-                        src="amlogo.png" 
-                        alt="Archivo Motor"
-                        class="w-24 h-24 object-contain"
-                    >
-                </div>
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center px-4 py-12">
+    <div class="max-w-2xl text-center">
 
-                <!-- Texto en blanco -->
-                <h3 class="brand-font text-sm text-white uppercase font-light mb-2">
-                    Archivo Motor
-                </h3>
+        <div class="mb-10">
+            <h3 class="brand-font text-sm text-white uppercase mb-3">
+                Archivo Motor
+            </h3>
+            <div class="w-16 h-px bg-gradient-to-r from-transparent via-sky-400 to-transparent mx-auto"></div>
+        </div>
 
-                <div class="w-16 h-px bg-gradient-to-r from-transparent via-sky-400 to-transparent mx-auto"></div>
+        <h1 class="title-font text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Deja de <span class="text-gray-400">gastar</span> en coches.<br>
+            Empieza a <span class="text-gray-400">invertir</span> en activos.
+        </h1>
+
+        <p class="text-lg md:text-xl text-gray-300 mb-12 font-light max-w-xl mx-auto">
+            Únete a la lista de espera de <strong class="text-white">Archivo Motor</strong>.
+            Análisis de mercado, tendencias y oportunidades que no comparto en Instagram.
+        </p>
+
+        <form class="mb-6">
+            <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input type="email" required placeholder="tu@email.com"
+                    class="flex-1 px-4 py-4 bg-zinc-900/80 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-sky-400">
+                <button type="submit"
+                    class="px-8 py-4 bg-sky-500 hover:bg-sky-400 text-zinc-900 font-semibold rounded-lg shadow-lg">
+                    Solicitar Acceso
+                </button>
             </div>
-            
-            <!-- Titular -->
-            <h1 class="title-font text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Deja de <span class="text-gray-400">gastar</span> en coches.<br>
-                Empieza a <span class="text-gray-400">invertir</span> en activos.
-            </h1>
-            
-            <!-- Subtítulo -->
-            <p class="text-lg md:text-xl text-gray-300 mb-12 font-light leading-relaxed max-w-xl mx-auto">
-                Únete a la lista de espera de <strong class="font-semibold text-white">Archivo Motor</strong>. 
-                Análisis de mercado, tendencias y oportunidades que no comparto en Instagram.
-            </p>
-            
-            <!-- Formulario -->
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSd3iGAviH3peiRZL2ORH7-Mhfk8qeH0RaXoAJlU5riaBid1Gg/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-                <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                    <input 
-                        type="email" 
-                        name="entry.464778111" 
-                        required 
-                        placeholder="tu@email.com"
-                        class="flex-1 px-4 py-4 bg-zinc-900/80 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-sky-400 focus:ring-1 focus:ring-sky-400"
-                    >
-                    <button 
-                        type="submit"
-                        class="px-8 py-4 bg-sky-500 hover:bg-sky-400 text-zinc-900 font-semibold rounded-lg shadow-lg"
-                    >
-                        Solicitar Acceso
-                    </button>
-                </div>
-            </form>
+        </form>
 
-            <iframe name="hidden_iframe" style="display:none;" onload="if(submitted){alert('¡Gracias! Te hemos añadido a la lista de espera.');}"></iframe>
-            <script>var submitted = false;</script>
-<!-- SECCIÓN DE CAJAS DE INFORMACIÓN -->
-<section class="py-20 px-4 border-t border-zinc-800">
-    <div class="max-w-5xl mx-auto">
+        <p class="text-xs text-gray-500">
+            🔒 Sin spam. Contenido exclusivo mensual. Cancela cuando quieras.
+        </p>
+    </div>
+</section>
 
-        <div class="grid md:grid-cols-3 gap-8">
+<!-- BENEFICIOS -->
+<section class="py-24 px-4 border-t border-zinc-800">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-10">
 
             <!-- Caja 1 -->
-            <div class="text-center p-8 rounded-xl border border-zinc-800 bg-zinc-900/30 hover:border-sky-400 transition">
-                <div class="w-12 h-12 mx-auto mb-6 text-sky-400">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10" />
-                    </svg>
+            <div class="p-10 rounded-2xl bg-zinc-900/40 border border-zinc-800 text-center">
+                <div class="w-14 h-14 mx-auto mb-6 flex items-center justify-center rounded-full bg-sky-500/10 text-sky-400 ring-1 ring-sky-400/30">
+                    📊
                 </div>
-                <h3 class="text-xl font-semibold mb-3 text-white">Datos Reales</h3>
+                <h3 class="text-xl font-semibold mb-3">Datos Reales</h3>
                 <p class="text-gray-400 font-light">
                     Análisis de mercado y revalorización con datos contrastados y verificables.
                 </p>
             </div>
 
             <!-- Caja 2 -->
-            <div class="text-center p-8 rounded-xl border border-zinc-800 bg-zinc-900/30 hover:border-sky-400 transition">
-                <div class="w-12 h-12 mx-auto mb-6 text-sky-400">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M12 8c-2 0-3 1-3 2s1 2 3 2 3 1 3 2-1 2-3 2" />
-                    </svg>
+            <div class="p-10 rounded-2xl bg-zinc-900/40 border border-zinc-800 text-center">
+                <div class="w-14 h-14 mx-auto mb-6 flex items-center justify-center rounded-full bg-sky-500/10 text-sky-400 ring-1 ring-sky-400/30">
+                    🎯
                 </div>
-                <h3 class="text-xl font-semibold mb-3 text-white">Oportunidades</h3>
+                <h3 class="text-xl font-semibold mb-3">Oportunidades</h3>
                 <p class="text-gray-400 font-light">
                     Modelos infravalorados antes de que el mercado los descubra.
                 </p>
             </div>
 
             <!-- Caja 3 -->
-            <div class="text-center p-8 rounded-xl border border-zinc-800 bg-zinc-900/30 hover:border-sky-400 transition">
-                <div class="w-12 h-12 mx-auto mb-6 text-sky-400">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M17 20h5v-2a3 3 0 00-5-3M7 20H2v-2a3 3 0 015-3m10-8a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
+            <div class="p-10 rounded-2xl bg-zinc-900/40 border border-sky-400/50 shadow-lg shadow-sky-500/10 text-center">
+                <div class="w-14 h-14 mx-auto mb-6 flex items-center justify-center rounded-full bg-sky-500/20 text-sky-400 ring-1 ring-sky-400/50">
+                    👥
                 </div>
-                <h3 class="text-xl font-semibold mb-3 text-white">Comunidad</h3>
+                <h3 class="text-xl font-semibold mb-3">Comunidad</h3>
                 <p class="text-gray-400 font-light">
                     Red privada de coleccionistas e inversores con mentalidad patrimonial.
                 </p>
@@ -145,11 +112,12 @@
     </div>
 </section>
 
-            <p class="text-xs text-gray-500 mt-4">
-                🔒 Sin spam. Contenido exclusivo mensual. Cancela cuando quieras.
-            </p>
-        </div>
-    </section>
+<!-- FOOTER -->
+<footer class="py-10 px-4 border-t border-zinc-800 text-center">
+    <p class="text-xs text-gray-600">
+        © 2026 Archivo Motor. Todos los derechos reservados.
+    </p>
+</footer>
 
 </body>
 </html>
