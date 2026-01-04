@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archivo Motor - Invierte en Clásicos</title>
+    <title>Archivo Motor</title>
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -22,89 +22,112 @@
         }
         .brand-font {
             font-family: 'Cormorant Garamond', serif;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.12em;
         }
-        .gradient-bg {
-            background: radial-gradient(circle at top, #0b1a2e 0%, #050d1a 55%, #030812 100%);
+        .bg-navy {
+            background-color: #050b16;
         }
     </style>
 </head>
 
-<body class="gradient-bg text-gray-100 min-h-screen">
+<body class="bg-navy text-gray-200">
 
 <!-- HERO -->
-<section class="min-h-screen flex items-center justify-center px-4 py-12">
-    <div class="max-w-2xl text-center">
+<section class="min-h-screen flex items-center justify-center px-4">
+    <div class="max-w-xl text-center">
 
-        <div class="mb-10">
-            <h3 class="brand-font text-sm text-white uppercase mb-3">
+        <div class="mb-6">
+            <h3 class="brand-font text-xs text-gray-300 uppercase mb-2">
                 Archivo Motor
             </h3>
-            <div class="w-16 h-px bg-gradient-to-r from-transparent via-sky-400 to-transparent mx-auto"></div>
+            <div class="w-12 h-px bg-sky-500 mx-auto opacity-60"></div>
         </div>
 
-        <h1 class="title-font text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        <h1 class="title-font text-4xl md:text-5xl font-bold leading-tight mb-5">
             Deja de <span class="text-gray-400">gastar</span> en coches.<br>
             Empieza a <span class="text-gray-400">invertir</span> en activos.
         </h1>
 
-        <p class="text-lg md:text-xl text-gray-300 mb-12 font-light max-w-xl mx-auto">
-            Únete a la lista de espera de <strong class="text-white">Archivo Motor</strong>.
-            Análisis de mercado, tendencias y oportunidades que no comparto en Instagram.
+        <p class="text-base text-gray-400 mb-8 leading-relaxed">
+            Lista de espera privada de <span class="text-white">Archivo Motor</span>.
+            Análisis de mercado, tendencias y oportunidades fuera de redes sociales.
         </p>
 
-        <form class="mb-6">
-            <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                <input type="email" required placeholder="tu@email.com"
-                    class="flex-1 px-4 py-4 bg-zinc-900/80 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-sky-400">
-                <button type="submit"
-                    class="px-8 py-4 bg-sky-500 hover:bg-sky-400 text-zinc-900 font-semibold rounded-lg shadow-lg">
-                    Solicitar Acceso
+        <form class="mb-4">
+            <div class="flex gap-2 max-w-md mx-auto">
+                <input
+                    type="email"
+                    placeholder="tu@email.com"
+                    required
+                    class="flex-1 px-4 py-3 bg-[#0b1424] border border-zinc-700 rounded-md text-sm text-white focus:outline-none focus:border-sky-500"
+                >
+                <button
+                    type="submit"
+                    class="px-6 py-3 bg-sky-500 text-[#050b16] text-sm font-semibold rounded-md hover:bg-sky-400 transition"
+                >
+                    Solicitar acceso
                 </button>
             </div>
         </form>
 
         <p class="text-xs text-gray-500">
-            🔒 Sin spam. Contenido exclusivo mensual. Cancela cuando quieras.
+            Acceso limitado · Sin spam · Baja cuando quieras
         </p>
+
     </div>
 </section>
 
 <!-- BENEFICIOS -->
-<section class="py-24 px-4 border-t border-zinc-800">
-    <div class="max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-10">
+<section class="py-14 border-t border-zinc-800">
+    <div class="max-w-5xl mx-auto px-4">
 
-            <!-- Caja 1 -->
-            <div class="p-10 rounded-2xl bg-zinc-900/40 border border-zinc-800 text-center">
-                <div class="w-14 h-14 mx-auto mb-6 flex items-center justify-center rounded-full bg-sky-500/10 text-sky-400 ring-1 ring-sky-400/30">
-                    📊
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <!-- Caja -->
+            <div class="border border-zinc-800 rounded-lg p-6">
+                <div class="text-sky-400 mb-3">
+                    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6" />
+                    </svg>
                 </div>
-                <h3 class="text-xl font-semibold mb-3">Datos Reales</h3>
-                <p class="text-gray-400 font-light">
-                    Análisis de mercado y revalorización con datos contrastados y verificables.
+                <h3 class="text-sm font-semibold text-white mb-2 text-center">
+                    Datos reales
+                </h3>
+                <p class="text-sm text-gray-400 text-center leading-snug">
+                    Análisis de mercado con datos contrastados y verificables.
                 </p>
             </div>
 
-            <!-- Caja 2 -->
-            <div class="p-10 rounded-2xl bg-zinc-900/40 border border-zinc-800 text-center">
-                <div class="w-14 h-14 mx-auto mb-6 flex items-center justify-center rounded-full bg-sky-500/10 text-sky-400 ring-1 ring-sky-400/30">
-                    🎯
+            <!-- Caja -->
+            <div class="border border-zinc-800 rounded-lg p-6">
+                <div class="text-sky-400 mb-3">
+                    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8c2 0 3 1 3 2s-1 2-3 2-3 1-3 2 1 2 3 2" />
+                    </svg>
                 </div>
-                <h3 class="text-xl font-semibold mb-3">Oportunidades</h3>
-                <p class="text-gray-400 font-light">
+                <h3 class="text-sm font-semibold text-white mb-2 text-center">
+                    Oportunidades
+                </h3>
+                <p class="text-sm text-gray-400 text-center leading-snug">
                     Modelos infravalorados antes de que el mercado los descubra.
                 </p>
             </div>
 
-            <!-- Caja 3 -->
-            <div class="p-10 rounded-2xl bg-zinc-900/40 border border-sky-400/50 shadow-lg shadow-sky-500/10 text-center">
-                <div class="w-14 h-14 mx-auto mb-6 flex items-center justify-center rounded-full bg-sky-500/20 text-sky-400 ring-1 ring-sky-400/50">
-                    👥
+            <!-- Caja -->
+            <div class="border border-sky-500/40 rounded-lg p-6">
+                <div class="text-sky-400 mb-3">
+                    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 20h5M7 20H2m10-8a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
                 </div>
-                <h3 class="text-xl font-semibold mb-3">Comunidad</h3>
-                <p class="text-gray-400 font-light">
-                    Red privada de coleccionistas e inversores con mentalidad patrimonial.
+                <h3 class="text-sm font-semibold text-white mb-2 text-center">
+                    Comunidad
+                </h3>
+                <p class="text-sm text-gray-400 text-center leading-snug">
+                    Red privada de coleccionistas e inversores patrimoniales.
                 </p>
             </div>
 
@@ -113,11 +136,12 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="py-10 px-4 border-t border-zinc-800 text-center">
+<footer class="py-6 border-t border-zinc-800 text-center">
     <p class="text-xs text-gray-600">
-        © 2026 Archivo Motor. Todos los derechos reservados.
+        © 2026 Archivo Motor
     </p>
 </footer>
 
 </body>
 </html>
+
